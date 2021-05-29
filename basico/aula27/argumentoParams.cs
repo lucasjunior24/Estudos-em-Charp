@@ -1,27 +1,22 @@
 using System;
 
+
 class argumentoParams
 {
     static void Main()
     {
-        
-        soma(3, 4, 3, 4);
+        int v1, v2, r;
+
+        Console.Write("Digite o primeiro numero: ");
+        v1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite o segundo numero: ");
+        v2 = Convert.ToInt32(Console.ReadLine());
+
+        soma(v1, v2);
     }
-    static void soma(params int []n)
+    static void soma(int n1, int n2)
     {
-        int res = 0;
-        if(n.Length < 1)
-        {
-            Console.WriteLine("Não existem valores a serem somados");
-        } else if(n.Length < 2)
-        {
-            Console.WriteLine("Valores insuficiente para soma, o valor informado é: {0}", n[0]);
-        } else {
-            for (int i = 0; i < n.Length; i++)
-            {
-                res+=n[i];
-            }
-            Console.WriteLine("A soma dos valores é {0}", res);
-        }
+        int res = n1 + n2;
+        Console.WriteLine("A soma de {0} e {1} é: {2}", n1, n2, res);
     }
 }
