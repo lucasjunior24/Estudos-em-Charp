@@ -75,8 +75,7 @@ class CarroCombate : Carro
     {
         monicao = 100;
         setRodas(6);
-        Listmonicao();
-        
+        Listmonicao(); 
     }
     public void Listmonicao()
     {
